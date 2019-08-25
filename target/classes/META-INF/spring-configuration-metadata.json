@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "",
+      "type": "com.demo.entity.AuthorSettings",
+      "sourceType": "com.demo.entity.AuthorSettings"
+    }
+  ],
+  "properties": [
+    {
+      "name": "age",
+      "type": "java.lang.Long",
+      "sourceType": "com.demo.entity.AuthorSettings"
+    },
+    {
+      "name": "name",
+      "type": "java.lang.String",
+      "sourceType": "com.demo.entity.AuthorSettings"
+    }
+  ],
+  "hints": []
+}
