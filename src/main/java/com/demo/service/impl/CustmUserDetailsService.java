@@ -22,13 +22,12 @@ public class CustmUserDetailsService implements UserDetailsService{
 	private UserService userService;
 
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		//1 ≤È—Ø”√ªß
 		System.out.println(username);
 		User user = userService.findOneByLogin(username);
 		if(user == null) {
 			throw new UsernameNotFoundException("User"+username+" was not found in db");
 		}
-		//2 …Ë÷√Ω«…´
+		//2 ‰øùÂ≠òÂà∞springÁºìÂ≠ò‰∏≠
 		Collection<GrantedAuthority> grantedAuthorities = new ArrayList<GrantedAuthority>();
 		GrantedAuthority grantedAuthority = new SimpleGrantedAuthority(user.getRole());
 		grantedAuthorities.add(grantedAuthority);

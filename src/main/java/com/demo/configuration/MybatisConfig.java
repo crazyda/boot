@@ -11,13 +11,20 @@ import org.springframework.context.annotation.Configuration;
 
 import com.alibaba.druid.pool.DruidDataSource;
 
+/**
+ * 
+ * @ClassName: MybatisConfig
+ * @Description: 解决项目找不到 datasource 的问题 但项目实际上没有用到
+ * @Author Crazy
+ * @DateTime 2019年8月31日 上午9:27:51
+ */
 //@Configuration
 public class MybatisConfig {
 
 //    @Autowired
     private DataSourceProperties dataSourceProperties;
 
-
+   
 //    @Bean(name = "dataSource")
     public DataSource dataSource() {
 

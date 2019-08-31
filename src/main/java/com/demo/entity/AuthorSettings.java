@@ -4,7 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties //通过读取配置文件的值,然后注解使用 问题:选择其他的配置文件
+@ConfigurationProperties //通 璇诲彇閰嶇疆鏂囦欢
 public class AuthorSettings {
 	private String name;
 	private Long age;

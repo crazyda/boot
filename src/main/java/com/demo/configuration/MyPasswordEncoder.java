@@ -3,7 +3,7 @@ package com.demo.configuration;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 //https://blog.csdn.net/Michael_HM/article/details/79913542
-//java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the id °∞null°± 
+//java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the id Ë¥¶Âè∑ÂØÜÁ†Å‰∏∫Á©∫ 
 public class MyPasswordEncoder implements  PasswordEncoder  {
 
 	public String encode(CharSequence charSequence) {

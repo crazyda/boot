@@ -14,8 +14,7 @@ public class UserServiceImpl implements UserService {
 	UserInfoMapper userInfoMapper;
 	
 	public User findOneByLogin(String login) {
-//		User user = userInfoMapper.findOneByLogin(login);
-		User user = new User();
+		User user = userInfoMapper.findOneByLogin(login);
 		return user;
 	}
 	

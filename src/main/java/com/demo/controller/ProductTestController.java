@@ -23,7 +23,7 @@ public class ProductTestController {
 	@RequestMapping("/info")
 	@ResponseBody
 	public String productInfo() {
-		//��ȡ��ǰ��¼�û�����Ϣ 
+		
 		String user = userService.findOneByLogin("admin1").getLogin();
 		Object principl = SecurityContextHolder.getContext()
 				.getAuthentication().getPrincipal();

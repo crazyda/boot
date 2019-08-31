@@ -18,7 +18,7 @@ public class HelloController {
 	@Autowired
 	UserMongo userMongo;
 	
-	// µÚÒ»¸öÀ¹½Ø
+	
 	@RequestMapping("/insecurity")
 	@ResponseBody
 	public String hello() {

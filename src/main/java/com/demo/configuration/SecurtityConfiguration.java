@@ -15,7 +15,7 @@ import com.demo.service.UserService;
 import com.demo.service.impl.CustmUserDetailsService;
 
 @Configuration
-@EnableWebSecurity //»á¼ÓÔØWebSecurityConfigurationÀà,¶øWebSecurityConfigurationÀàÖĞ¾ÍÓĞ´´½¨springSecurityFilterChainÕâ¸öFilterµÄ´úÂë
+@EnableWebSecurity //è¿™é‡Œå¯ç”¨äº† Web å®‰å…¨
 public class SecurtityConfiguration extends WebSecurityConfigurerAdapter {
 
 	@Autowired
@@ -24,8 +24,8 @@ public class SecurtityConfiguration extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		/**
-		 * authorizeRequests() ¶¨ÒåÄÇĞ©url ĞèÒª±»±£»¤,ÄÇĞ©²»ĞèÒª
-		 * formLogin() ¶¨Òåµ±ĞèÒªÓÃ»§µÇÂ¼µÄÊ±ºò ×ªµ½µÇÂ¼Ò³Ãæ
+		 * authorizeRequests() ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ©url ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½Ğ©ï¿½ï¿½ï¿½ï¿½Òª
+		 * formLogin() ï¿½ï¿½ï¿½åµ±ï¿½ï¿½Òªï¿½Ã»ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ê±ï¿½ï¿½ ×ªï¿½ï¿½ï¿½ï¿½Â¼Ò³ï¿½ï¿½
 		 */
 //		http
 //		.authorizeRequests()
@@ -37,12 +37,12 @@ public class SecurtityConfiguration extends WebSecurityConfigurerAdapter {
 //		.httpBasic();
 		
 		//
-//		http.formLogin() 	// ¶¨Òåµ±ĞèÒªÓÃ»§µÇÂ¼µÄÊ±ºò,Ìø×ªµ½µÇÂ½Ò³Ãæ
+//		http.formLogin() 	// é€šè¿‡formLogin æ–¹æ³•å®šåˆ¶ç™»å½•æ“ä½œ
 //		.and()
-//		.authorizeRequests() 	//¶¨ÒåÄÇĞ©URL ĞèÒª±»±£»¤,ÄÇĞ©²»ĞèÒª±»±£»¤
-//		.anyRequest()	//ÈÎºÎÇëÇó µÇÂ¼ºó¿ÉÒÔ·ÃÎÊ
-//		.authenticated();
-		http.csrf().disable();//¹Ø±Õ·À¿çÓò¹¥»÷¹¦ÄÜ£¬Ê¹ÓÃ http.csrf().disable()£º
+//		.authorizeRequests() 	//é€šè¿‡ è¿™ä¸ªæ–¹æ³•æ¥å¼€å§‹è¯·æ±‚æƒé™é…ç½®
+//		.anyRequest()	//å…¶ä½™æ‰€æœ‰çš„è¯·æ±‚éƒ½éœ€è¦è®¤è¯åæ‰èƒ½è®¿é—®
+//		.authenticated(); //ç”¨æˆ·ç™»å½•åå¯ä»¥è®¿é—®
+		http.csrf().disable();//å…³é—­é˜²è·¨åŸŸæ”»å‡»åŠŸèƒ½ï¼Œ
 		
 		
 	}
@@ -51,7 +51,7 @@ public class SecurtityConfiguration extends WebSecurityConfigurerAdapter {
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 //		auth
 //		.inMemoryAuthentication()
-//		.passwordEncoder(new MyPasswordEncoder()) //Ö÷ÒªÊÇ´¦ÀíÃÜÂë °µÎÄºÍÃ÷ÎÄµÄÎÊÌâ
+//		.passwordEncoder(new MyPasswordEncoder()) //ç»§æ‰¿springSecurtityçš„å¯†ç ,è‡ªå®šä¹‰å¯†ç 
 //		.withUser("admin1")
 //		.password("admin1")
 //		.roles("ADMIN","USER")

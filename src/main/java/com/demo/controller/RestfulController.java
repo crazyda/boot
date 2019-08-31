@@ -9,9 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.demo.entity.User;
 
 /**
- * 	Ö÷ÒªÊÇrestful ·ç¸ñÀàĞÍµÄ½Ó¿Ú
- * @author Crazy
- *
+ * 	
+ * @ClassName: RestfulController
+ * @Description: restful é£æ ¼ å…¥å£ 
+ * @Author Crazy
+ * @DateTime 2019å¹´8æœˆ31æ—¥ ä¸Šåˆ9:44:12
  */
 @RestController
 @RequestMapping("/api/student/")
