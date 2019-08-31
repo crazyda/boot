@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication(exclude = {
         DataSourceAutoConfiguration.class
@@ -13,6 +14,7 @@ import org.springframework.context.annotation.Configuration;
 @ServletComponentScan
 @Configuration
 @EnableAutoConfiguration
+@EnableJpaRepositories	//用于开启Spring data jpa
 public class DemoApplication {
 
 	public static void main(String[] args) {
