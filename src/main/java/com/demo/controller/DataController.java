@@ -7,6 +7,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,6 +27,9 @@ public class DataController {
 	@Autowired
 	PersonRepository personRepository;
 	
+	@Autowired
+	MongoTemplate mongoTemplate;
+	
 	/**
 	 * 保存
 	 * save支持批量保存：<S extends T> Iterable<S> save(Iterable<S> entities);
@@ -42,7 +46,7 @@ public class DataController {
 	public Person save(String name,String address,Integer age){
 		
 		Person p = personRepository.save(new Person(null, name, age, address));
-		
+		mongoTemplate.save(p);
 		return p;
 		
 	}
