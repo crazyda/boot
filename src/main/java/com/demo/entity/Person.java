@@ -24,6 +24,12 @@ public class Person {
 	public Person() {
 		super();
 	}
+	
+	public Person(String name) {
+		super();
+		this.name = name;
+	}
+
 	public Person(Long id, String name, Integer age, String address) {
 		super();
 		this.id = id;
