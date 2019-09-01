@@ -21,7 +21,7 @@ import com.demo.entity.Person;
  * @DateTime 2019年8月31日 下午4:28:22
  */
 //对映射进行修改得
-@RepositoryRestResource(path="people")
+//@RepositoryRestResource(path="people")
 public interface PersonRepository extends JpaRepository<Person,Long>{ // 使用jpa 必须继承该接口
 	List<Person> findByAddress(String address);
 	
