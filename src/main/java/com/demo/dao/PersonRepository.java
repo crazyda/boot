@@ -41,6 +41,9 @@ public interface PersonRepository extends JpaRepository<Person,Long>{ // 使用j
 	// 作为rest 风格 暴露
 	@RestResource(path="nameStartsWith",rel="nameStartsWith")
 	List<Person> findByNameStartsWith(String name);
+
+	@Query("select p from Person p where p.id=:id")
+	Person findOne(Long id);
 	
 	
 }
