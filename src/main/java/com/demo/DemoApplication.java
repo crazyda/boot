@@ -1,16 +1,18 @@
 package com.demo;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.web.servlet.ServletComponentScan;
-import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.cache.ehcache.EhCacheCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+import com.demo.interceptor.properties.PropertiesListener;
 
 @SpringBootApplication(exclude = {
         DataSourceAutoConfiguration.class
@@ -22,9 +24,13 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableCaching	//开启缓存支持 会自动烧苗ehcache.xml 文件
 public class DemoApplication {
 
+	private static  Logger logger = LoggerFactory.getLogger(DemoApplication.class);
+	
 	public static void main(String[] args) {
+		logger.debug("日志启动:");
 		SpringApplication.run(DemoApplication.class, args);
 	}
+
 	
 //	 @Bean  
 //	    public ConfigurationCustomizer configurationCustomizer() {  
